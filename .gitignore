@@ -1,0 +1,12 @@
+
+.DS_Store
+
+sources/dbpedia3.8/germany_codes.nt
+
+sources/dbpedia3.8/in_germany.nt
+
+sources/dbpedia3.8/mappingbased_properties_en.nt
+
+sources/dbpedia3.8/mappingbased_properties_en_uris_de.nt
+
+sources/dbpedia3.8/municipality_codes.nt

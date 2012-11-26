@@ -1,0 +1,9 @@
+CONSTRUCT {
+	?gemeinde <http://dbpedia.org/ontology/municipalityCode> ?schluessel .
+}
+WHERE {
+	?gemeinde <http://dbpedia.org/ontology/municipalityCode> ?schluessel_str ;
+		<http://dbpedia.org/ontology/country> <http://dbpedia.org/resource/Germany> .
+	# remove language tags - they shouldn't be there
+	BIND (str(?schluessel_str) AS ?schluessel)
+}

@@ -1,0 +1,8 @@
+CONSTRUCT {
+	?ags_entity <http://www.w3.org/2002/07/owl#sameAs> ?geonames_entity .
+}
+WHERE { 
+	?ags_entity <http://www.w3.org/2002/07/owl#sameAs> ?dbpedia_entity .
+	?dbpedia_entity <http://www.w3.org/2002/07/owl#sameAs> ?geonames_entity .
+	FILTER (regex(str(?ags_entity), "datalysator", "i"))
+}

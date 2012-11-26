@@ -1,0 +1,11 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX ags: <http://datalysator.com/lod/ags/schema/> 
+PREFIX dbpedia: <http://dbpedia.org/ontology/> 
+
+CONSTRUCT {
+	?csv_region owl:sameAs ?dbpedia_region .
+}
+WHERE {
+	?dbpedia_region dbpedia:municipalityCode ?code .
+	?csv_region ags:ags ?code .
+}
