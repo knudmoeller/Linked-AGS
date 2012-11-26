@@ -23,7 +23,7 @@ The **Regionalschlüssel** (ARS) adds four more digits for the Gemeindeverband:
 The current URI structure of the dataset follows the ARS:
 
     http://datalysator.com/lod/ags/BUNDESLAND/REGIERUNGSBEZIRK/KREIS/GEMEINDEVERBAND/GEMEINDE
-    e.g.: http://datalysator.com/lod/ags/12/0/64/5410 = Neuhardenberg
+    e.g.: http://datalysator.com/lod/ags/12/0/64/5410/340 = Neuhardenberg
 
 ## Sources ##
 
