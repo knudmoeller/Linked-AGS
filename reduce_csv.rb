@@ -1,5 +1,17 @@
 #!/bin/ruby
 
+# The source AGS file can have several successive entries for the same entity, from a higher to a lower administrative level.
+# This script removes all but the lowest one. E.g.:
+# 
+# 40,41,01,0,01,,,"Flensburg, Stadt",,,,,,,,,,,,
+# 50,50,01,0,01,0000,,"Flensburg, Stadt",,,,,,,,,,,,
+# 60,61,01,0,01,0000,000,"Flensburg, Stadt",56.74,89357,44028,45329,1575,24937,"9,437509","54,78252",F02,Ostsee,01,Städtisch
+# 
+# will be reduced to 
+# 
+# 60,61,01,0,01,0000,000,"Flensburg, Stadt",56.74,89357,44028,45329,1575,24937,"9,437509","54,78252",F02,Ostsee,01,Städtisch
+
+
 class Reducer
   
   attr_accessor :previous_name, :previous_line
